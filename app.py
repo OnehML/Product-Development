@@ -58,7 +58,7 @@ def load_user(user_id):
 
 # Load and preprocess data
 def load_data():
-    df = pd.read_csv("C:/Users/bida21-014/dash_project/assignment/web_server_data.csv")
+    df = pd.read_csv("web_server_data.csv")
     df['timestamp'] = pd.to_datetime(df['timestamp'], format='mixed', dayfirst=False, errors='coerce')
     df['date'] = pd.to_datetime(df['date'], errors='coerce')
     df['month'] = df['date'].dt.month
@@ -69,7 +69,7 @@ def load_data():
     return df
 
 # Load the global DataFrame
-df = pd.read_csv("C:/Users/bida21-014/dash_project/assignment/web_server_data.csv")
+df = pd.read_csv("web_server_data.csv")  # File in same directory as app.py
 
 # Continent to country mapping
 continent_to_countries = {
